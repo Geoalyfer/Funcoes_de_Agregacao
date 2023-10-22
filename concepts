@@ -1,0 +1,54 @@
+COUNT : Contar linhas de uma tabela ou de uma coluna
+
+SELECT COUNT (*) AS total_linhas
+	FROM venda
+
+3000
+--------------------------------------------------------
+SUM : Soma os valores de uma coluna
+
+SELECT SUM (valor_unitario) AS total_valor_unitario
+	FROM venda
+
+2780824,05999996
+
+--------------------------------------------------------
+
+A aplicação da função de agregação pode ser combinada com o cálculo de coluna da seguinte forma:
+  
+SELECT  SUM (valor_unitario * quantidade) AS total_valor_final_venda
+	FROM venda
+  
+6704846,61000003
+
+-------------------------------------------------------
+
+AVG : calcula a média dos valores de uma coluna
+
+SELECT AVG (valor_unitario) AS media_valor_unitario
+	FROM venda
+
+926,941353333321
+
+-----------------------------------------------------
+
+MAX Retorna o maior valor de uma coluna
+
+SELECT MAX (quantidade) max_qtde
+	FROM venda
+
+4
+-----------------------------------------------------
+
+MIN Retorna o menor valor de uma coluna
+
+SELECT MIN (valor_unitario) min_valor_unitario
+	FROM venda
+
+55,9
+  
+
+
+  
+
+  
